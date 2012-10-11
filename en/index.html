@@ -77,9 +77,6 @@ section: home
 
 <script>
     $(function() {
-        var selectedRegion = null;
-        //var sidebarTemplate = Handlebars.compile($('#region-sidebar').html());
-
         $.getJSON('/data/datasets.json', function(datasets) {
                 var regionDatasets = _.groupBy(datasets, function(ds) {
                     return ds.region;
@@ -125,25 +122,10 @@ section: home
 
                 }
 
-                var setPathCol = function(path, selected, border){
-                    path.realFill = path.svgPath.attrs.fill;
-                    path.svgPath.attr({'fill': selected ? '#df3e67':'#199a7b'});//'#cc0033' : '#007a5e'});
-                    return path;
-                }
-
-                var setRegionCol = function(region, col, border){
-                    var path = map.getLayerPath('region', region);
-                    return setPathCol(path, col, border);
-                }
-
                 var selectRegion= function(region){
-                    if(selectedRegion!=null){
-                        var path = setRegionCol(selectedRegion, false, false);
-                        path.svgPath.attr({'stroke-width': 1});
-                    }
-                    selectedRegion = region;
-                    var path = setRegionCol(selectedRegion, true, true);
-                    path.svgPath.attr({'stroke-width': 2});
+                    var path = map.getLayerPath("region", region);
+                    $(map.container.selector + " path.active").removeClass("active");
+                    $(path.svgPath.node).addClass("active");
                 }
 
                 // communes.svg adamawa.svg cameroon.svg north_west.svg regions.svg region_communes.svg
@@ -152,17 +134,7 @@ section: home
                         map.addLayer({
                             id: 'region',
                             key: 'region'
-
                         });
-
-                        var layer = map.getLayer('region');
-                        for(var i=0;i<layer.paths.length;i++){
-                            var path = layer.paths[i];
-                            //setPathCol(path, false, false);
-                            path.svgPath.attr({'fill': '#199a7b'});
-                            path.svgPath.attr({'stroke-width': 1});
-                            path.svgPath.attr({'stroke': '#fff'});
-                        }
 
                         map.tooltips({
                             layer: 'region',
@@ -185,16 +157,6 @@ section: home
                         map.onLayerEvent('click', function(d) {
                             selectRegion(d.region);
                             showData(d.region);
-                        });
-
-                        map.onLayerEvent('mouseover', function(d) {
-                            setRegionCol(d.region, true, false);
-                        });
-
-                        map.onLayerEvent('mouseout', function(d) {
-                            if(d.region!=selectedRegion){
-                                setRegionCol(d.region, false, false);
-                            }
                         });
 
                     });
