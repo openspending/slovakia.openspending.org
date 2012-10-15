@@ -3,7 +3,7 @@ $(document).ready(function() {
             var regionDatasets = _.groupBy(datasets, function(ds) {
                 return ds.region;
             });
-            window.map = $K.map('#map',500,350);
+            window.map = $K.map('#map');
 
             var showData = function(region) {
                var regionData = regionDatasets[region];

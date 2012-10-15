@@ -207,10 +207,11 @@ footer a:hover {
 
 .home #map {
     margin: 0 0 20px 0;
+    height: 350px;
 }
 
 .home #map svg {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 
 .home #map svg .region {
