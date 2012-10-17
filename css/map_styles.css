@@ -1,15 +1,10 @@
 #map path {
     fill: #199a7b;
     stroke: #fff;
-    stroke-width: 1px;
+    stroke-width: 2px;
     cursor: pointer;
 }
 
-#map path:hover {
+#map path:hover, #map path.active {
     fill: #df3e67;
-}
-
-#map path.active {
-    fill: #df3e67;
-    stroke-width: 2px;
 }
