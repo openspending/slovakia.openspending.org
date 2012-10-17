@@ -61,15 +61,7 @@ $(document).ready(function() {
                     map.tooltips({
                         layer: 'region',
                         content: function(data) {
-                            var countStr = "";
-                            if(regionDatasets[data]){
-                                countStr = regionDatasets[data].length.toString();
-                            }
-                            else{
-                                countStr = 'National budget';
-                            }
-                            return data + ' (' + countStr + ')';
-
+                            return data;
                         },
                         style: {
                             name: 'dark'
@@ -80,7 +72,6 @@ $(document).ready(function() {
                         selectRegion(d.region);
                         showData(d.region);
                     });
-
                 });
             });
     });
