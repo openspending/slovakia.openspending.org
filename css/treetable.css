@@ -1,0 +1,8 @@
+.disable, .disable:hover {
+  color: #ddd;
+  text-decoration: none;
+}
+
+#vis_widget {
+  height: 400px;
+}

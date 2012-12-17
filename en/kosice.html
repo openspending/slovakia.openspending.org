@@ -1,0 +1,27 @@
+---
+layout: default
+title: Košice
+section: kosice
+forum: kosice
+---
+
+<h2 class="page-title">Košice</h2>
+
+<div id="treetable_widget"></div>
+
+<link rel="stylesheet" href="/css/treetable.css">
+<script type="text/javascript" src="{{site.openspendingjs}}/prod/boot.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/lib/vendor/backbone-0.9.1.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/lib/widgets.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/widgets/treemap/main.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/widgets/aggregate_table/main.js"></script>
+<script type="text/javascript" src="/js/treetable.js"></script>
+<script type="text/javascript" src="/js/kosice.js"></script>
+
+<script type="text/javascript">
+  $(function () {
+      OpenSpending.scriptRoot = "{{site.openspendingjs}}";
+      Backbone.history.start();
+  });
+</script>
+
