@@ -40,17 +40,26 @@ OpenSpending.Treetable = function (elem, context, drilldowns) {
 
   function _addTotalRowToResults(calculateRowsValues, data) {
     var rows = calculateRowsValues(data);
-    var total = {
-      __amount_pct: 1,
-      amount: data.summary.amount,
-      group: {
-        label: "TOTAL"
-      }
-    };
+    var total = _calculateTotalRow(data, rows);
 
     rows.push(total);
 
     return rows;
+  }
+
+  function _calculateTotalRow(data) {
+    var total = {
+      __amount_pct: 1,
+      amount: data.summary.amount
+    };
+
+    _.each(drilldowns, function (drilldown) {
+      total[drilldown] = {
+        label: "TOTAL"
+      };
+    });
+
+    return total;
   }
 
   return {

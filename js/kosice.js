@@ -26,7 +26,7 @@ $(function() {
       router.treetable.drilldown(currentFilters, function (name, filters, drilldown) {
         var filters = _.extend({}, filters);
         filters[drilldown] = name;
-        this.setFilters(filters);
+        router.setFilters(filters);
       });
     },
 
@@ -101,5 +101,5 @@ $(function() {
     },
   });
 
-  OpenSpending.app = new OpenSpending.WidgetLink($('#treetable_widget'), context, {'year': '2012'}, ['group']);
+  OpenSpending.app = new OpenSpending.WidgetLink($('#treetable_widget'), context, {'year': '2012'}, ['group', 'to']);
 });
