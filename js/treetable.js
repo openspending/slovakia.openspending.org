@@ -4,7 +4,11 @@ OpenSpending.Treetable = function (elem, context, drilldowns) {
 
   function render(state, callback) {
     var treemap_ctx = _.extend(context, {
-      click: function(node) { callback(node.data.name); }
+      click: function(node) { callback(node.data.name); },
+      tooltipMessage: function(widget, node) {
+        var percentualValue = (node.data.value * 100)/widget.total;
+        return node.name + " (" + (percentualValue).toFixed(2) + "%)";
+      }
     });
 
     new OpenSpending.Treemap(treemapElem, treemap_ctx, state);
