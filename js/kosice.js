@@ -2,9 +2,8 @@ OpenSpending = "OpenSpending" in window ? OpenSpending : {}
 
 $(function() {
   var context = {
-    dataset: "kosice",
     siteUrl: "http://openspending.org",
-    pagesize: 3,
+    pagesize: 10,
     callback: function(name) {
       console.log("HUHU");
     }
@@ -12,28 +11,34 @@ $(function() {
 
   OpenSpending.WidgetLink = Backbone.Router.extend({
     routes: {
-        "": "home",
-        "*args": "drilldown"
+        ":dataset": "home",
+        ":dataset/*args": "drilldown"
     },
 
-    home: function() {
-      this.setFilters(this.initialFilters);
+    home: function(dataset) {
+      var self = this;
+      this.setDataset(dataset).then(function () {
+        self.yearsContainer.find(':last').click();
+      });
     },
 
-    drilldown: function(args) {
+    drilldown: function(dataset, args) {
+      //this.dataset = dataset;
+      this.setDataset(dataset);
       var router = this;
       var currentFilters = this.getFilters();
-      router.treetable.drilldown(currentFilters, function (name, filters, drilldown) {
-        var filters = _.extend({}, filters);
+      router.treetable.drilldown(this.dataset, currentFilters, function (name, filters, drilldown) {
+        filters = _.extend({}, filters);
         filters[drilldown] = name;
         router.setFilters(filters);
       });
     },
 
     getFragment: function(filters) {
-      return _.map(_.keys(filters), function(k) {
+      var fragment = _.map(_.keys(filters), function(k) {
         return k + ':' + filters[k];
       }).join('/');
+      return this.dataset + '/' + fragment;
     },
 
     setFilters: function(filters) {
@@ -43,19 +48,23 @@ $(function() {
 
     getFilters: function() {
       var filters = {};
-      _.each(Backbone.history.fragment.split('/'), function(kv) {
+      var fragment = Backbone.history.fragment.split('/');
+      fragment.shift();
+      _.each(fragment, function(kv) {
         var kv_ = kv.split(':', 2);
         filters[kv_[0]] = kv_[1];
       });
       return filters;
     },
 
-    setupYearsLinks: function(yearsContainer) {
+    setupYearsLinks: function() {
+      var self = this;
       var router = this;
+      this.yearsContainer.empty();
 
       function fetchDistinct(dimension, attribute, query) {
         var dfd = $.ajax({
-            url: context.siteUrl + '/' + context.dataset + '/' + dimension + '.distinct',
+            url: context.siteUrl + '/' + self.dataset + '/' + dimension + '.distinct',
             data: {attribute: attribute, q: query, limit: 20},
             dataType: 'jsonp',
             cache: true,
@@ -66,12 +75,12 @@ $(function() {
 
       function renderYears(years) {
         _.each(years.sort(), function (year) {
-          yearsContainer.append("<a class='btn' data-year='"+year+"' href='#'>"+year+"</a>");
+          self.yearsContainer.append("<a class='btn' data-year='"+year+"' href='#'>"+year+"</a>");
         });
       }
 
       function setupYearsEvents() {
-        yearsContainer.find('a').click(function () {
+        self.yearsContainer.find('a').click(function () {
           var element = $(this);
           element.siblings().removeClass('disable')
           element.addClass('disable');
@@ -90,14 +99,20 @@ $(function() {
       }).promise();
     },
 
+    setDataset: function(dataset) {
+      if (dataset == this.dataset) {
+        return;
+      }
+      this.dataset = dataset;
+      $('.page-title').html(dataset);
+      $('title').html(dataset);
+      return this.setupYearsLinks();
+    },
+
     initialize: function(elem, context, filters, drilldowns) {
       this.treetable = OpenSpending.Treetable(elem, context, drilldowns);
       this.initialFilters = filters;
-
-      var yearsContainer = $('<div class="openspending-link-filter" />').insertBefore(elem);
-      this.setupYearsLinks(yearsContainer).then(function () {
-        yearsContainer.find(':last').click();
-      });
+      this.yearsContainer = $('<div class="openspending-link-filter" />').insertBefore(elem);
     },
   });
 
