@@ -1,8 +1,8 @@
-Website for "Where does Cameroon's Money Go?"
-=============================================
+Municipal Budgets of Slovakia
+=============================
 
-This contains the web frontend to the Cameroon budget site, a front-end
-to the OpenSpending platform built in cooperation with the World Bank.
+This contains the web frontend to the Slovakia budget site, a front-end
+to the OpenSpending platform.
 
 Initialize the repository
 -------------------------
