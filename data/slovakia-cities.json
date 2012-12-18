@@ -1,0 +1,1106 @@
+[
+    {
+        "location": {
+            "lat": 48.14389038085938, 
+            "lon": 17.10972213745117
+        }, 
+        "name": "Bratislava", 
+        "population": 462603
+    }, 
+    {
+        "location": {
+            "lat": 48.71666717529297, 
+            "lon": 21.25
+        }, 
+        "name": "Ko\u0161ice", 
+        "population": 233659
+    }, 
+    {
+        "location": {
+            "lat": 49.00166702270508, 
+            "lon": 21.23944473266602
+        }, 
+        "name": "Pre\u0161ov", 
+        "population": 91650
+    }, 
+    {
+        "location": {
+            "lat": 49.2227783203125, 
+            "lon": 18.73999977111816
+        }, 
+        "name": "\u017dilina", 
+        "population": 85302
+    }, 
+    {
+        "location": {
+            "lat": 48.30694580078125, 
+            "lon": 18.08638954162598
+        }, 
+        "name": "Nitra", 
+        "population": 84800
+    }, 
+    {
+        "location": {
+            "lat": 48.73249816894531, 
+            "lon": 19.14916610717773
+        }, 
+        "name": "Bansk\u00e1 Bystrica", 
+        "population": 78327
+    }, 
+    {
+        "location": {
+            "lat": 48.37749862670898, 
+            "lon": 17.58833312988281
+        }, 
+        "name": "Trnava", 
+        "population": 68466
+    }, 
+    {
+        "location": {
+            "lat": 49.06499862670898, 
+            "lon": 18.92194366455078
+        }, 
+        "name": "Martin, Slovakia", 
+        "population": 58000
+    }, 
+    {
+        "location": {
+            "lat": 48.89194488525391, 
+            "lon": 18.03666687011719
+        }, 
+        "name": "Tren\u010d\u00edn", 
+        "population": 56365
+    }, 
+    {
+        "location": {
+            "lat": 49.05944442749023, 
+            "lon": 20.29750061035156
+        }, 
+        "name": "Poprad", 
+        "population": 55042
+    }, 
+    {
+        "location": {
+            "lat": 48.77111053466797, 
+            "lon": 18.62166595458984
+        }, 
+        "name": "Prievidza", 
+        "population": 49387
+    }, 
+    {
+        "location": {
+            "lat": 48.570556640625, 
+            "lon": 19.11750030517578
+        }, 
+        "name": "Zvolen", 
+        "population": 43006
+    }, 
+    {
+        "location": {
+            "lat": 49.11388778686523, 
+            "lon": 18.4416675567627
+        }, 
+        "name": "Pova\u017esk\u00e1 Bystrica", 
+        "population": 41697
+    }, 
+    {
+        "location": {
+            "lat": 47.98555374145508, 
+            "lon": 18.15777778625488
+        }, 
+        "name": "Nov\u00e9 Z\u00e1mky", 
+        "population": 41140
+    }, 
+    {
+        "location": {
+            "lat": 48.74916839599609, 
+            "lon": 21.90138816833496
+        }, 
+        "name": "Michalovce", 
+        "population": 40255
+    }, 
+    {
+        "location": {
+            "lat": 48.94388961791992, 
+            "lon": 20.5674991607666
+        }, 
+        "name": "Spi\u0161sk\u00e1 Nov\u00e1 Ves", 
+        "population": 38357
+    }, 
+    {
+        "location": {
+            "lat": 47.76333236694336, 
+            "lon": 18.12833404541016
+        }, 
+        "name": "Kom\u00e1rno", 
+        "population": 36279
+    }, 
+    {
+        "location": {
+            "lat": 48.21638870239258, 
+            "lon": 18.60805511474609
+        }, 
+        "name": "Levice", 
+        "population": 35980
+    }, 
+    {
+        "location": {
+            "lat": 48.93583297729492, 
+            "lon": 21.90666580200195
+        }, 
+        "name": "Humenn\u00e9", 
+        "population": 34916
+    }, 
+    {
+        "location": {
+            "lat": 49.2933349609375, 
+            "lon": 21.2761116027832
+        }, 
+        "name": "Bardejov", 
+        "population": 33020
+    }, 
+    {
+        "location": {
+            "lat": 49.08416748046875, 
+            "lon": 19.60222244262695
+        }, 
+        "name": "Liptovsk\u00fd Mikul\u00e1\u0161", 
+        "population": 32786
+    }, 
+    {
+        "location": {
+            "lat": 49.07860946655273, 
+            "lon": 19.3083324432373
+        }, 
+        "name": "Ru\u017eomberok", 
+        "population": 29906
+    }, 
+    {
+        "location": {
+            "lat": 48.58416748046875, 
+            "lon": 17.83361053466797
+        }, 
+        "name": "Pie\u0161\u0165any", 
+        "population": 29660
+    }, 
+    {
+        "location": {
+            "lat": 48.55416488647461, 
+            "lon": 18.17694473266602
+        }, 
+        "name": "Topo\u013e\u010dany", 
+        "population": 28685
+    }, 
+    {
+        "location": {
+            "lat": 48.32860946655273, 
+            "lon": 19.66916656494141
+        }, 
+        "name": "Lu\u010denec", 
+        "population": 27790
+    }, 
+    {
+        "location": {
+            "lat": 49.43583297729492, 
+            "lon": 18.79222297668457
+        }, 
+        "name": "\u010cadca", 
+        "population": 25852
+    }, 
+    {
+        "location": {
+            "lat": 48.96055603027344, 
+            "lon": 18.17388916015625
+        }, 
+        "name": "Dubnica nad V\u00e1hom", 
+        "population": 25427
+    }, 
+    {
+        "location": {
+            "lat": 48.38111114501953, 
+            "lon": 20.01444435119629
+        }, 
+        "name": "Rimavsk\u00e1 Sobota", 
+        "population": 24374
+    }, 
+    {
+        "location": {
+            "lat": 48.62583160400391, 
+            "lon": 18.37277793884277
+        }, 
+        "name": "Partiz\u00e1nske", 
+        "population": 24340
+    }, 
+    {
+        "location": {
+            "lat": 47.99444580078125, 
+            "lon": 17.61944389343262
+        }, 
+        "name": "Dunajsk\u00e1 Streda", 
+        "population": 23467
+    }, 
+    {
+        "location": {
+            "lat": 48.62777709960938, 
+            "lon": 21.71722221374512
+        }, 
+        "name": "Trebi\u0161ov", 
+        "population": 23152
+    }, 
+    {
+        "location": {
+            "lat": 48.88083267211914, 
+            "lon": 21.6733341217041
+        }, 
+        "name": "Vranov nad Top\u013eou", 
+        "population": 23063
+    }, 
+    {
+        "location": {
+            "lat": 48.80389022827148, 
+            "lon": 19.64361190795898
+        }, 
+        "name": "Brezno", 
+        "population": 22221
+    }, 
+    {
+        "location": {
+            "lat": 48.43333435058594, 
+            "lon": 17.8033332824707
+        }, 
+        "name": "Hlohovec", 
+        "population": 22192
+    }, 
+    {
+        "location": {
+            "lat": 48.29194259643555, 
+            "lon": 17.26611137390137
+        }, 
+        "name": "Pezinok", 
+        "population": 21334
+    }, 
+    {
+        "location": {
+            "lat": 48.98805618286133, 
+            "lon": 22.15666580200195
+        }, 
+        "name": "Snina", 
+        "population": 21326
+    }, 
+    {
+        "location": {
+            "lat": 48.68055725097656, 
+            "lon": 17.36666679382324
+        }, 
+        "name": "Senica", 
+        "population": 20860
+    }, 
+    {
+        "location": {
+            "lat": 48.75472259521484, 
+            "lon": 17.83083343505859
+        }, 
+        "name": "Nov\u00e9 Mesto nad V\u00e1hom", 
+        "population": 20705
+    }, 
+    {
+        "location": {
+            "lat": 48.71861267089844, 
+            "lon": 18.25805473327637
+        }, 
+        "name": "B\u00e1novce nad Bebravou", 
+        "population": 20639
+    }, 
+    {
+        "location": {
+            "lat": 49.21055603027344, 
+            "lon": 19.29750061035156
+        }, 
+        "name": "Doln\u00fd Kub\u00edn", 
+        "population": 19775
+    }, 
+    {
+        "location": {
+            "lat": 48.58416748046875, 
+            "lon": 18.8608341217041
+        }, 
+        "name": "\u017diar nad Hronom", 
+        "population": 19750
+    }, 
+    {
+        "location": {
+            "lat": 48.65833282470703, 
+            "lon": 20.53083419799805
+        }, 
+        "name": "Ro\u017e\u0148ava", 
+        "population": 19231
+    }, 
+    {
+        "location": {
+            "lat": 49.11999893188477, 
+            "lon": 18.3305549621582
+        }, 
+        "name": "P\u00fachov", 
+        "population": 18658
+    }, 
+    {
+        "location": {
+            "lat": 48.43583297729492, 
+            "lon": 17.01777839660645
+        }, 
+        "name": "Malacky", 
+        "population": 17847
+    }, 
+    {
+        "location": {
+            "lat": 48.72722244262695, 
+            "lon": 18.76194381713867
+        }, 
+        "name": "Handlov\u00e1", 
+        "population": 17698
+    }, 
+    {
+        "location": {
+            "lat": 49.13360977172852, 
+            "lon": 20.42638969421387
+        }, 
+        "name": "Ke\u017emarok", 
+        "population": 17241
+    }, 
+    {
+        "location": {
+            "lat": 48.2863883972168, 
+            "lon": 17.73749923706055
+        }, 
+        "name": "Sere\u010f", 
+        "population": 17224
+    }, 
+    {
+        "location": {
+            "lat": 49.29833221435547, 
+            "lon": 18.78666687011719
+        }, 
+        "name": "Kysuck\u00e9 Nov\u00e9 Mesto", 
+        "population": 16470
+    }, 
+    {
+        "location": {
+            "lat": 49.30944442749023, 
+            "lon": 20.67888832092285
+        }, 
+        "name": "Star\u00e1 \u013dubov\u0148a", 
+        "population": 16363
+    }, 
+    {
+        "location": {
+            "lat": 48.18888854980469, 
+            "lon": 17.72638893127441
+        }, 
+        "name": "Galanta", 
+        "population": 15873
+    }, 
+    {
+        "location": {
+            "lat": 48.55138778686523, 
+            "lon": 19.41833305358887
+        }, 
+        "name": "Detva", 
+        "population": 15020
+    }, 
+    {
+        "location": {
+            "lat": 48.84222412109375, 
+            "lon": 17.2266674041748
+        }, 
+        "name": "Skalica", 
+        "population": 14963
+    }, 
+    {
+        "location": {
+            "lat": 49.02527618408203, 
+            "lon": 20.58805465698242
+        }, 
+        "name": "Levo\u010da", 
+        "population": 14731
+    }, 
+    {
+        "location": {
+            "lat": 48.21500015258789, 
+            "lon": 19.33805465698242
+        }, 
+        "name": "Ve\u013ek\u00fd Krt\u00ed\u0161", 
+        "population": 13862
+    }, 
+    {
+        "location": {
+            "lat": 48.37833404541016, 
+            "lon": 18.39666748046875
+        }, 
+        "name": "Zlat\u00e9 Moravce", 
+        "population": 13345
+    }, 
+    {
+        "location": {
+            "lat": 48.68305587768555, 
+            "lon": 20.11333274841309
+        }, 
+        "name": "Rev\u00faca", 
+        "population": 13098
+    }, 
+    {
+        "location": {
+            "lat": 48.74916839599609, 
+            "lon": 17.56444358825684
+        }, 
+        "name": "Myjava", 
+        "population": 12811
+    }, 
+    {
+        "location": {
+            "lat": 48.02666854858398, 
+            "lon": 17.31166648864746
+        }, 
+        "name": "\u0160amor\u00edn", 
+        "population": 12481
+    }, 
+    {
+        "location": {
+            "lat": 49.30555725097656, 
+            "lon": 21.56777763366699
+        }, 
+        "name": "Svidn\u00edk", 
+        "population": 12384
+    }, 
+    {
+        "location": {
+            "lat": 49.10610961914062, 
+            "lon": 21.08555603027344
+        }, 
+        "name": "Sabinov", 
+        "population": 12378
+    }, 
+    {
+        "location": {
+            "lat": 48.93305587768555, 
+            "lon": 18.14388847351074
+        }, 
+        "name": "Nov\u00e1 Dubnica", 
+        "population": 12358
+    }, 
+    {
+        "location": {
+            "lat": 48.81222152709961, 
+            "lon": 17.16055488586426
+        }, 
+        "name": "Hol\u00ed\u010d", 
+        "population": 11627
+    }, 
+    {
+        "location": {
+            "lat": 49.22416687011719, 
+            "lon": 18.56416702270508
+        }, 
+        "name": "Byt\u010da", 
+        "population": 11595
+    }, 
+    {
+        "location": {
+            "lat": 47.79916763305664, 
+            "lon": 18.71805572509766
+        }, 
+        "name": "\u0160t\u00farovo", 
+        "population": 11172
+    }, 
+    {
+        "location": {
+            "lat": 49.20500183105469, 
+            "lon": 21.65138816833496
+        }, 
+        "name": "Stropkov", 
+        "population": 10829
+    }, 
+    {
+        "location": {
+            "lat": 47.91694259643555, 
+            "lon": 17.99555587768555
+        }, 
+        "name": "Kol\u00e1rovo", 
+        "population": 10747
+    }, 
+    {
+        "location": {
+            "lat": 48.45805740356445, 
+            "lon": 18.89638900756836
+        }, 
+        "name": "Bansk\u00e1 \u0160tiavnica", 
+        "population": 10662
+    }, 
+    {
+        "location": {
+             "lat": 48.218889,
+             "lon": 17.399722
+        }, 
+        "name": "Senec (Slovakia)", 
+        "population": 15542
+    }, 
+    {
+        "location": {
+              "lat": 48.150278,
+              "lon": 17.8775
+        }, 
+        "name": "\u0160a\u013ea, Slovakia", 
+        "population": 24256
+    }, 
+    {
+        "location": {
+            "lat": 48.08722305297852, 
+            "lon": 18.18611145019531
+        }, 
+        "name": "\u0160urany", 
+        "population": 10460
+    }, 
+    {
+        "location": {
+            "lat": 49.361667,
+            "lon": 19.610556
+        }, 
+        "name": "Trsten\u00e1", 
+        "population": 7551
+    }, 
+    {
+        "location": {
+            "lat": 48.776667,
+            "lon": 17.696111
+        }, 
+        "name": "Stara Tura", 
+        "population": 10003
+    }, 
+    {
+        "location": {
+            "lat": 48.26833343505859, 
+            "lon": 19.82472229003906
+        }, 
+        "name": "Fi\u013eakovo", 
+        "population": 10362
+    }, 
+    {
+        "location": {
+            "lat": 48.60638809204102, 
+            "lon": 21.00027847290039
+        }, 
+        "name": "Moldava nad Bodvou", 
+        "population": 9899
+    }, 
+    {
+        "location": {
+            "lat": 48.55027770996094, 
+            "lon": 22.0847225189209
+        }, 
+        "name": "Ve\u013ek\u00e9 Kapu\u0161any", 
+        "population": 9536
+    }, 
+    {
+        "location": {
+            "lat": 49.33694458007812, 
+            "lon": 19.55027770996094
+        }, 
+        "name": "Tvrdo\u0161\u00edn", 
+        "population": 9402
+    }, 
+    {
+        "location": {
+            "lat": 48.2408332824707, 
+            "lon": 18.3086109161377
+        }, 
+        "name": "Vr\u00e1ble", 
+        "population": 9390
+    }, 
+    {
+        "location": {
+            "lat": 48.27111053466797, 
+            "lon": 17.03166580200195
+        }, 
+        "name": "Stupava, Malacky District", 
+        "population": 9383
+    }, 
+    {
+        "location": {
+            "lat": 47.85638809204102, 
+            "lon": 17.77055549621582
+        }, 
+        "name": "Ve\u013ek\u00fd Meder", 
+        "population": 8968
+    }, 
+    {
+        "location": {
+            "lat": 48.91388702392578, 
+            "lon": 20.87388801574707
+        }, 
+        "name": "Krompachy", 
+        "population": 8870
+    }, 
+    {
+        "location": {
+            "lat": 48.3316650390625, 
+            "lon": 17.30888938903809
+        }, 
+        "name": "Modra", 
+        "population": 8704
+    }, 
+    {
+        "location": {
+            "lat": 49.40277862548828, 
+            "lon": 19.48138809204102
+        }, 
+        "name": "N\u00e1mestovo", 
+        "population": 8094
+    }, 
+    {
+        "location": {
+            "lat": 48.57333374023438, 
+            "lon": 19.52277755737305
+        }, 
+        "name": "Hri\u0148ov\u00e1", 
+        "population": 8067
+    }, 
+    {
+        "location": {
+            "lat": 47.87555694580078, 
+            "lon": 18.19333267211914
+        }, 
+        "name": "Hurbanovo", 
+        "population": 8041
+    }, 
+    {
+        "location": {
+            "lat": 48.42222213745117, 
+            "lon": 20.33027839660645
+        }, 
+        "name": "Torna\u013ea", 
+        "population": 7991
+    }, 
+    {
+        "location": {
+            "lat": 48.06527709960938, 
+            "lon": 18.95138931274414
+        }, 
+        "name": "\u0160ahy", 
+        "population": 7973
+    }, 
+    {
+        "location": {
+            "lat": 48.70249938964844, 
+            "lon": 21.65666580200195
+        }, 
+        "name": "Se\u010dovce", 
+        "population": 7945
+    }, 
+    {
+        "location": {
+            "lat": 48.35361099243164, 
+            "lon": 19.0666675567627
+        }, 
+        "name": "Krupina", 
+        "population": 7812
+    }, 
+    {
+        "location": {
+            "lat": 49.40277862548828, 
+            "lon": 18.62194442749023
+        }, 
+        "name": "Turzovka", 
+        "population": 7785
+    }, 
+    {
+        "location": {
+            "lat": 49.03749847412109, 
+            "lon": 19.72583389282227
+        }, 
+        "name": "Liptovsk\u00fd Hr\u00e1dok", 
+        "population": 7778
+    }, 
+    {
+        "location": {
+            "lat": 48.57333374023438, 
+            "lon": 19.95388793945312
+        }, 
+        "name": "Hn\u00fa\u0161\u0165a", 
+        "population": 7513
+    }, 
+    {
+        "location": {
+            "lat": 49.06583404541016, 
+            "lon": 20.18722152709961
+        }, 
+        "name": "Svit", 
+        "population": 7510
+    }, 
+    {
+        "location": {
+            "lat": 48.04861068725586, 
+            "lon": 18.6602783203125
+        }, 
+        "name": "\u017deliezovce", 
+        "population": 7486
+    }, 
+    {
+        "location": {
+            "lat": 48.42305374145508, 
+            "lon": 21.9727783203125
+        }, 
+        "name": "Kr\u00e1\u013eovsk\u00fd Chlmec", 
+        "population": 7398
+    }, 
+    {
+        "location": {
+            "lat": 48.42444610595703, 
+            "lon": 18.6391658782959
+        }, 
+        "name": "Nov\u00e1 Ba\u0148a", 
+        "population": 7334
+    }, 
+    {
+        "location": {
+            "lat": 49.11166763305664, 
+            "lon": 18.91833305358887
+        }, 
+        "name": "Vr\u00fatky", 
+        "population": 7247
+    }, 
+    {
+        "location": {
+            "lat": 49.39166641235352, 
+            "lon": 18.83333396911621
+        }, 
+        "name": "Kr\u00e1sno nad Kysucou", 
+        "population": 7038
+    }, 
+    {
+        "location": {
+            "lat": 48.85889053344727, 
+            "lon": 18.86361122131348
+        }, 
+        "name": "Tur\u010dianske Teplice", 
+        "population": 6941
+    }, 
+    {
+        "location": {
+            "lat": 49.27083206176758, 
+            "lon": 21.90388870239258
+        }, 
+        "name": "Medzilaborce", 
+        "population": 6616
+    }, 
+    {
+        "location": {
+            "lat": 48.47999954223633, 
+            "lon": 18.71805572509766
+        }, 
+        "name": "\u017darnovica", 
+        "population": 6501
+    }, 
+    {
+        "location": {
+            "lat": 49.15277862548828, 
+            "lon": 20.96194458007812
+        }, 
+        "name": "Lipany", 
+        "population": 6423
+    }, 
+    {
+        "location": {
+            "lat": 48.61999893188477, 
+            "lon": 17.72361183166504
+        }, 
+        "name": "Vrbov\u00e9", 
+        "population": 6309
+    }, 
+    {
+        "location": {
+            "lat": 48.74361038208008, 
+            "lon": 22.18083381652832
+        }, 
+        "name": "Sobrance", 
+        "population": 6274
+    }, 
+    {
+        "location": {
+            "lat": 49.18583297729492, 
+            "lon": 20.45666694641113
+        }, 
+        "name": "Spi\u0161sk\u00e1 Bel\u00e1", 
+        "population": 6189
+    }, 
+    {
+        "location": {
+            "lat": 48.84805679321289, 
+            "lon": 20.93722152709961
+        }, 
+        "name": "Gelnica", 
+        "population": 6171
+    }, 
+    {
+        "location": {
+            "lat": 48.96055603027344, 
+            "lon": 18.11638832092285
+        }, 
+        "name": "Nem\u0161ov\u00e1", 
+        "population": 6136
+    }, 
+    {
+        "location": {
+            "lat": 49.08694458007812, 
+            "lon": 18.63277816772461
+        }, 
+        "name": "Rajec", 
+        "population": 6078
+    }, 
+    {
+        "location": {
+            "lat": 48.43055725097656, 
+            "lon": 19.79750061035156
+        }, 
+        "name": "Polt\u00e1r", 
+        "population": 5929
+    }, 
+    {
+        "location": {
+            "lat": 48.20527648925781, 
+            "lon": 17.64416694641113
+        }, 
+        "name": "Sl\u00e1dkovi\u010dovo", 
+        "population": 5677
+    }, 
+    {
+        "location": {
+            "lat": 48.69972229003906, 
+            "lon": 18.91583251953125
+        }, 
+        "name": "Kremnica", 
+        "population": 5597
+    }, 
+    {
+        "location": {
+            "lat": 48.66388702392578, 
+            "lon": 17.53972244262695
+        }, 
+        "name": "Brezov\u00e1 pod Bradlom", 
+        "population": 5447
+    }, 
+    {
+        "location": {
+            "lat": 48.99361038208008, 
+            "lon": 18.23444366455078
+        }, 
+        "name": "Ilava", 
+        "population": 5414
+    }, 
+    {
+        "location": {
+            "lat": 48.71611022949219, 
+            "lon": 17.12222290039062
+        }, 
+        "name": "Gbely", 
+        "population": 5149
+    }, 
+    {
+        "location": {
+            "lat": 48.820556640625, 
+            "lon": 20.3658332824707
+        }, 
+        "name": "Dob\u0161in\u00e1", 
+        "population": 5125
+    }, 
+    {
+        "location": {
+            "lat": 48.64166641235352, 
+            "lon": 17.15138816833496
+        }, 
+        "name": "\u0160a\u0161t\u00edn-Str\u00e1\u017ee", 
+        "population": 5056
+    }, 
+    {
+        "location": {
+            "lat": 48.77916717529297, 
+            "lon": 18.58333396911621
+        }, 
+        "name": "Bojnice", 
+        "population": 4983
+    }, 
+    {
+        "location": {
+            "lat": 48.25194549560547, 
+            "lon": 17.21555519104004
+        }, 
+        "name": "Sv\u00e4t\u00fd Jur", 
+        "population": 4929
+    }, 
+    {
+        "location": {
+            "lat": 48.61194610595703, 
+            "lon": 19.14361190795898
+        }, 
+        "name": "Slia\u010d", 
+        "population": 4812
+    }, 
+    {
+        "location": {
+            "lat": 49.14749908447266, 
+            "lon": 20.22750091552734
+        }, 
+        "name": "Vysok\u00e9 Tatry (town)", 
+        "population": 4718
+    }, 
+    {
+        "location": {
+            "lat": 49.03833389282227, 
+            "lon": 21.1916675567627
+        }, 
+        "name": "Ve\u013ek\u00fd \u0160ari\u0161", 
+        "population": 4643
+    }, 
+    {
+        "location": {
+            "lat": 48.86722183227539, 
+            "lon": 21.82444381713867
+        }, 
+        "name": "Str\u00e1\u017eske", 
+        "population": 4551
+    }, 
+    {
+        "location": {
+            "lat": 48.71333312988281, 
+            "lon": 18.53944396972656
+        }, 
+        "name": "Nov\u00e1ky", 
+        "population": 4424
+    }, 
+    {
+        "location": {
+            "lat": 48.41666793823242, 
+            "lon": 22.09638977050781
+        }, 
+        "name": "\u010cierna nad Tisou", 
+        "population": 4299
+    }, 
+    {
+        "location": {
+            "lat": 48.90833282470703, 
+            "lon": 18.16861152648926
+        }, 
+        "name": "Tren\u010dianske Teplice", 
+        "population": 4297
+    }, 
+    {
+        "location": {
+            "lat": 49.11166763305664, 
+            "lon": 21.51833343505859
+        }, 
+        "name": "Giraltovce", 
+        "population": 4182
+    }, 
+    {
+        "location": {
+            "lat": 48.28777694702148, 
+            "lon": 18.5311107635498
+        }, 
+        "name": "Tlma\u010de", 
+        "population": 4172
+    }, 
+    {
+        "location": {
+            "lat": 48.68055725097656, 
+            "lon": 19.94555473327637
+        }, 
+        "name": "Tisovec", 
+        "population": 4092
+    }, 
+    {
+        "location": {
+            "lat": 48.44416809082031, 
+            "lon": 17.76749992370605
+        }, 
+        "name": "Leopoldov", 
+        "population": 4083
+    },
+    {
+        "location": {
+            "lat": 49, 
+            "lon": 20.75166702270508
+        }, 
+        "name": "Spi\u0161sk\u00e9 Podhradie", 
+        "population": 3826
+    }, 
+    {
+        "location": {
+            "lat": 48.69972229003906, 
+            "lon": 20.89333343505859
+        }, 
+        "name": "Medzev", 
+        "population": 3776
+    }, 
+    {
+        "location": {
+            "lat": 49.02639007568359, 
+            "lon": 21.50027847290039
+        }, 
+        "name": "Hanu\u0161ovce nad Top\u013eou", 
+        "population": 3660
+    }, 
+    {
+        "location": {
+            "lat": 48.94972229003906, 
+            "lon": 20.79722213745117
+        }, 
+        "name": "Spi\u0161sk\u00e9 Vlachy", 
+        "population": 3596
+    }, 
+    {
+        "location": {
+            "lat": 49.25722122192383, 
+            "lon": 20.53083419799805
+        }, 
+        "name": "Podol\u00ednec", 
+        "population": 3204
+    }, 
+    {
+        "location": {
+            "lat": 48.62555694580078, 
+            "lon": 20.23944473266602
+        }, 
+        "name": "Jel\u0161ava", 
+        "population": 3147
+    }, 
+    {
+        "location": {
+            "lat": 49.12527847290039, 
+            "lon": 18.68222236633301
+        }, 
+        "name": "Rajeck\u00e9 Teplice", 
+        "population": 2728
+    }, 
+    {
+        "location": {
+            "lat": 49.38360977172852, 
+            "lon": 20.36277770996094
+        }, 
+        "name": "Spi\u0161sk\u00e1 Star\u00e1 Ves", 
+        "population": 2335
+    }, 
+    {
+        "location": {
+            "lat": 48.16666793823242, 
+            "lon": 18.88277816772461
+        }, 
+        "name": "Dudince", 
+        "population": 1503
+    }, 
+    {
+        "location": {
+            "lat": 48.2400016784668, 
+            "lon": 19.33305549621582
+        }, 
+        "name": "Modr\u00fd Kame\u0148", 
+        "population": 1457
+    }
+]
