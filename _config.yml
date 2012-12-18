@@ -1,39 +1,7 @@
 pygments: true
 auto: true
 
-title: Cameroon Budget Inquirer
+title: Slovakia Municipalities
 openspendingjs: '/js/openspendingjs'
-url: http://cameroon.openspending.org
+url: http://slovakia.openspending.org
 
-locales:
-  en:
-    home: "Home"
-    about: "About"
-    why: "Why Budget Transparency"
-    nationalbudget: "National Investment Budget"
-    nwbudget: "Regional Investment Budget"
-    transparencyindex: "Local Budget Transparency Index"
-    councilbudget: "Council Budget"
-    collaborationbetween: "is a collaboration between the"
-    worldbank: "World Bank"
-    andthe: "and the"
-    intro: "intro and background"
-    contribute: "Contribute"
-    localcouncilinfo: "local council information"
-    sourcecode: "Source code repository"
-
-  fr:
-    home: "Accueil"
-    about: "A propos"
-    why: "Pourquoi la transparence budgétaire?"
-    nationalbudget: "Budget national d'investissement"
-    nwbudget: "Budget régional d'investissement"
-    transparencyindex: "Indice de transparence"
-    councilbudget: "Budget du conseil"
-    collaborationbetween: "est une coopération entre"
-    worldbank: "la Banque Mondiale"
-    andthe: "et"
-    intro: "introduction et contexte"
-    contribute: "Contribuer"
-    localcouncilinfo: "des informations sur les conseils locaux"
-    sourcecode: "Code source"
