@@ -100,19 +100,28 @@ $(function() {
     },
 
     setDataset: function(dataset) {
+      var self = this;
       if (dataset == this.dataset) {
         return;
       }
       this.dataset = dataset;
-      $('.page-title').html(dataset);
-      $('title').html(dataset);
+      $.ajax({
+            url: context.siteUrl + '/' + self.dataset + '.json',
+            dataType: 'jsonp',
+            cache: true,
+            jsonpCallback: 'metadata_' + self.dataset
+            }).then(function(data) {
+              $('.page-title').html(data.label);
+              $('title').html(data.label);
+              $('.dataset-description').html(data.description);
+            });
       return this.setupYearsLinks();
     },
 
     initialize: function(elem, context, filters, drilldowns) {
       this.treetable = OpenSpending.Treetable(elem, context, drilldowns);
       this.initialFilters = filters;
-      this.yearsContainer = $('<div class="openspending-link-filter" />').insertBefore(elem);
+      this.yearsContainer = $('#openspending-switches');
     },
   });
 
