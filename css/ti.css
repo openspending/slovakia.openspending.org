@@ -1,0 +1,27 @@
+
+body {
+  background-color: #dbe4ea;
+  background-image: url(../img/ti/bg.png);
+}
+
+header .container {
+  background-image: url(../img/ti/head.png);
+}
+
+header #logo {
+  padding-top: 0;
+}
+
+header #logo img {
+  height: 98px;
+  margin-bottom: 6px;
+}
+
+.container.page {
+  background-color: white;
+  padding: 0.5em;
+
+  -webkit-box-shadow: 0px 0px 6px 0px #777777;
+  box-shadow: 0px 0px 6px 0px #777777;
+  z-index: 1000;
+}
