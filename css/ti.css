@@ -30,6 +30,7 @@ header #logo img {
 }
 
 footer {
+  border-top: 1px solid white;
   background-color: #a3bccf;
 }
 
