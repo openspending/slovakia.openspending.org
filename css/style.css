@@ -195,3 +195,11 @@ footer a, footer a:hover {
   display:block;
 }
 
+.dual-column-list li {
+  width: 50%;
+  float: left;
+}
+
+.single-column-list li {
+  width: 100%;
+}

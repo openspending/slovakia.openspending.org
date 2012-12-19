@@ -1,13 +1,6 @@
 $(document).ready(function() {
   $.getJSON('/data/districts.json', function(districts) {
-    districts = _.filter(districts, function(d) {return d.datasets!=undefined});
-    var first = $('#first-list').empty();
-    var second = $('#second-list').empty();
-    _.each(districts, function(d, i) {
-      var el = (i%2 == 0) ? first : second;
-      el.append('<li><a href="'+urlFor(d.datasets)+'">'+d.name+'</a></li>');
-    });
-
+    districts = _.filter(districts, function(d) { return d.dataset !== undefined; });
     window.map = $K.map('#map', 920, 500);
 
     map.loadMap('/img/slovakia.svg', function(map) {
@@ -18,24 +11,17 @@ $(document).ready(function() {
         });
 
         $.each(map.getLayer('district').paths, function (i, path) {
-          findDistrictWithDatasets(districts, path.data, function () {
+          findDistrict(districts, path.data, function () {
             $(path.svgPath.node).addClass('hasDataset');
           });
         });
 
         addDistrictsToPathData(map.getLayer('district').paths, districts);
         setupTooltips();
+        setupDistrictsList(districts, $('#district-list'));
       });
     });
   });
-
-  function findDistrictWithDatasets(districts, data, callback) {
-    findDistrict(districts, data, function (district) {
-      if (district.datasets) {
-        callback(district);
-      }
-    });
-  }
 
   function findDistrict(districts, data, callback) {
     var district = _.find(districts, function (district) {
@@ -59,10 +45,10 @@ $(document).ready(function() {
       content: {
         text: function (abc) {
           var district = this.data().district;
-          var datasets = district.datasets;
+          var dataset = district.dataset;
           var text = '';
 
-          $.each(datasets, function (i, dataset) {
+          $.each(dataset, function (i, dataset) {
             text += '<p><a href="'+urlFor(dataset.dataset)+'">'+dataset.name+'</a></p>';
           });
 
@@ -80,15 +66,29 @@ $(document).ready(function() {
       events: {
         show: function(event, api, abc) {
           var district = $('#'+event.originalEvent.target.id).data().district;
-          var datasets = district.datasets;
-          if (_.isString(datasets)) {
+          var dataset = district.dataset;
+          if (_.isString(dataset)) {
             event.preventDefault();
-            window.location.href = urlFor(datasets);
+            window.location.href = urlFor(dataset);
           }
         }
       },
       hide: false,
       style: 'qtip-light qtip-rounded'
+    });
+  }
+
+  function setupDistrictsList(districts, list) {
+    list.empty();
+    _.each(districts, function(district, i) {
+      var dataset = district.dataset;
+      if (_.isString(dataset)) {
+        list.append('<li><a href="'+urlFor(district.dataset)+'">'+district.name+'</a></li>');
+      } else {
+        list.prepend('<li>'+district.name+'<ul class="single-column-list"></ul></li>');
+        var sublist = list.find('ul:last');
+        setupDistrictsList(dataset, sublist);
+      }
     });
   }
 
