@@ -5,7 +5,6 @@ $(document).ready(function() {
     var second = $('#second-list').empty();
     _.each(districts, function(d, i) {
       var el = (i%2 == 0) ? first : second;
-      console.log(d.name);
       el.append("<li><a href='municipality/#"+d.dataset+"'>"+d.name+"</a></li>");
     });
 
