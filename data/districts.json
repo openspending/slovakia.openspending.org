@@ -63,7 +63,13 @@
             "lon": "17.113473"
         }, 
         "name": "Bratislava V", 
-        "population": 119441
+        "population": 119441,
+        "dataset": [
+          {
+            "name": "Petržalka",
+            "dataset": "bratislava-petrzalka"
+          }
+        ]
     }, 
     {
         "location": {
@@ -87,7 +93,8 @@
             "lon": 19.14999961853027
         }, 
         "name": "Bansk\u00e1 Bystrica", 
-        "population": 111946
+        "population": 111946,
+        "dataset": "banska-bystrica"
     }, 
     {
         "location": {
@@ -104,7 +111,8 @@
             "lon": "18.131111"
         }, 
         "name": "Kom\u00e1rno", 
-        "population": 108556
+        "population": 108556,
+        "dataset": "komarno"
     }, 
     {
         "location": {
@@ -160,7 +168,8 @@
             "lon": "20.564167"
         }, 
         "name": "Spi\u0161sk\u00e1 Nov\u00e1 Ves", 
-        "population": 93516
+        "population": 93516,
+        "dataset": "spisska_nova_ves"
     }, 
     {
         "location": {
@@ -168,7 +177,17 @@
             "lon": "17.050116"
         }, 
         "name": "Bratislava IV", 
-        "population": 92926
+        "population": 92926,
+        "dataset": [
+          {
+            "name": "Dúbravka",
+            "dataset": "bratislava-dubravka"
+          },
+          {
+            "name": "Karlova Ves",
+            "dataset": "bratislava-karlova-ves"
+          }
+        ]
     }, 
     {
         "location": {
@@ -184,7 +203,13 @@
             "lon": "21.207"
         }, 
         "name": "Ko\u0161ice II", 
-        "population": 79934
+        "population": 79934,
+        "dataset": [
+          {
+            "name": "Západ",
+            "dataset": "kosice-zapad"
+          }
+        ]
     }, 
     {
         "location": {
@@ -445,7 +470,13 @@
             "lon": 17.10190010070801
         }, 
         "name": "Bratislava I", 
-        "population": 42858
+        "population": 42858,
+        "dataset": [
+          {
+            "name": "Staré Mesto",
+            "dataset": "bratislava-stare-mesto"
+          }
+        ]
     }, 
     {
         "location": {
@@ -525,7 +556,13 @@
             "lon": "21.298056"
         }, 
         "name": "Ko\u0161ice III", 
-        "population": 30349
+        "population": 30349,
+        "dataset": [
+          {
+            "name": "Dargovských hrdinov",
+            "dataset": "kosice-dargovskych-hrdinov"
+          }
+        ]
     }, 
     {
         "location": {
@@ -646,6 +683,7 @@
             "lon": "19.663611"
         }, 
         "name": "Lucenec", 
-        "population": 72837
+        "population": 72837,
+        "dataset": "lucenec"
     }
 ]
