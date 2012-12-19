@@ -46,7 +46,7 @@
         }, 
         "name": "Trnava", 
         "population": 126864,
-        "dataset": "trnava"
+        "datasets": "trnava"
     }, 
     {
         "location": {
@@ -55,7 +55,7 @@
         }, 
         "name": "Levice", 
         "population": 120021,
-        "dataset": "levice"
+        "datasets": "levice"
     }, 
     {
         "location": {
@@ -96,7 +96,7 @@
         }, 
         "name": "Michalovce", 
         "population": 109121,
-        "dataset": "michalovce"
+        "datasets": "michalovce"
     }, 
     {
         "location": {
@@ -217,7 +217,7 @@
         }, 
         "name": "Zvolen", 
         "population": 67650,
-        "dataset": "zvolen"
+        "datasets": "zvolen"
     }, 
     {
         "location": {
@@ -258,7 +258,7 @@
         }, 
         "name": "Pie\u0161\u0165any", 
         "population": 64019,
-        "dataset": "piestany"
+        "datasets": "piestany"
     }, 
     {
         "location": {
@@ -298,7 +298,17 @@
             "lon": "17.126513"
         }, 
         "name": "Bratislava III", 
-        "population": 61418
+        "population": 61418,
+        "datasets": [
+          {
+            "name": "Nové Mesto",
+            "dataset": "bratislava-nove-mesto"
+          },
+          {
+            "name": "Raca Vydavky",
+            "dataset": "bratislava-raca-vydavky"
+          }
+        ]
     }, 
     {
         "location": {
@@ -355,7 +365,7 @@
         }, 
         "name": "\u0160a\u013ea", 
         "population": 54000,
-        "dataset": "sala"
+        "datasets": "sala"
     }, 
     {
         "location": {
