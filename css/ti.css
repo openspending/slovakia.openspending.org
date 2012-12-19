@@ -29,6 +29,20 @@ header #logo img {
   margin-bottom: 6px;
 }
 
+footer {
+  background-color: #a3bccf;
+}
+
+footer > .inner {
+  color: #333;
+  text-shadow: none;
+  min-height: 100px;
+}
+
+a, footer a, footer a:hover {
+  color: #51697d;
+}
+
 .container.page {
   background-color: white;
   padding: 0.5em;

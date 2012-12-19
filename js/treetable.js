@@ -1,6 +1,4 @@
-OpenSpending.Treetable = function (elem, context, drilldowns) {
-  var treemapElem = $('<div id="vis_widget" />').appendTo(elem);
-  var aggregateTableElem = $('<div id="table_widget" />').appendTo(elem);
+OpenSpending.Treetable = function (context, drilldowns) {
 
   function render(dataset, state, callback) {
     var render_ctx = _.extend(context, {"dataset": dataset});
@@ -12,8 +10,8 @@ OpenSpending.Treetable = function (elem, context, drilldowns) {
       }
     });
 
-    new OpenSpending.Treemap(treemapElem, treemap_ctx, state);
-    new OpenSpending.AggregateTable(aggregateTableElem, render_ctx, state).then(function(widget) {
+    new OpenSpending.Treemap($('#vis_widget'), treemap_ctx, state);
+    new OpenSpending.AggregateTable($('#table_widget'), render_ctx, state).then(function(widget) {
       widget.calculateRowsValues = _.wrap(widget.calculateRowsValues, _addTotalRowToResults)
       widget.$e.unbind('click', 'td a');
       widget.$e.on('click', 'td a', function(e) {

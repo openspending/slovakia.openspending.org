@@ -118,12 +118,12 @@ $(function() {
       return this.setupYearsLinks();
     },
 
-    initialize: function(elem, context, filters, drilldowns) {
-      this.treetable = OpenSpending.Treetable(elem, context, drilldowns);
+    initialize: function(context, filters, drilldowns) {
+      this.treetable = OpenSpending.Treetable(context, drilldowns);
       this.initialFilters = filters;
       this.yearsContainer = $('#openspending-switches');
     },
   });
 
-  OpenSpending.app = new OpenSpending.WidgetLink($('#treetable_widget'), context, {'year': '2012'}, ['group', 'to']);
+  OpenSpending.app = new OpenSpending.WidgetLink(context, {'year': '2012'}, ['group', 'to']);
 });
