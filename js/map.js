@@ -86,7 +86,7 @@ $(document).ready(function() {
         list.append('<li><a href="'+urlFor(district.dataset)+'">'+district.name+'</a></li>');
       } else {
         list.prepend('<li>'+district.name+'<ul class="single-column-list"></ul></li>');
-        var sublist = list.find('ul:last');
+        var sublist = list.find('ul:first');
         setupDistrictsList(dataset, sublist);
       }
     });
