@@ -1,7 +1,7 @@
 #map path {
-    stroke: #000;
-    stroke-width: 1px;
-    fill: white;
+    stroke: #fff;
+    stroke-width: 2px;
+    fill: #ddd;
 }
 
 #map path.hasDataset {

@@ -1,6 +1,15 @@
 $(document).ready(function() {
   $.getJSON('/data/districts.json', function(districts) {
-    window.map = $K.map('#map', 940, 500);
+    districts = _.filter(districts, function(d) {return d.dataset!=undefined});
+    var first = $('#first-list').empty();
+    var second = $('#second-list').empty();
+    _.each(districts, function(d, i) {
+      var el = (i%2 == 0) ? first : second;
+      console.log(d.name);
+      el.append("<li><a href='municipality/#"+d.dataset+"'>"+d.name+"</a></li>");
+    });
+
+    window.map = $K.map('#map', 920, 500);
 
     map.loadMap('/img/slovakia.svg', function(map) {
       map.loadCSS('/css/map_styles.css', function() {
