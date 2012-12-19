@@ -4,6 +4,11 @@ title: Cameroon
 section: home
 ---
 
+<script type="text/javascript" src="{{site.openspendingjs}}/lib/vendor/underscore.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/lib/vendor/raphael-min.js"></script>
+<script type="text/javascript" src="{{site.openspendingjs}}/lib/vendor/jquery.qtip.min.js"></script>
+<script type="text/javascript" src="/js/kartograph.min.js"></script>
+<script src="/js/jquery.svgdomclass.js"></script>
 <script src="/js/map.js"></script>
 
 
@@ -14,15 +19,11 @@ section: home
 <hr/>
 
 <div class="row">
-    <div class="span7">
-        <div id="map">
-            <div class="instruction">
-              Select a region on the map to see budget and survey information related to it.
-            </div>
+    <div class="span12">
+        <div class="instruction">
+          Select a region on the map to see budget and survey information related to it.
         </div>
-    </div>
-    <div class="span5">
-        <div id="budget-data">
+        <div id="map">
         </div>
     </div>
 </div>

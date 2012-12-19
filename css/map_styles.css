@@ -1,10 +1,18 @@
 #map path {
-    fill: #199a7b;
-    stroke: #fff;
-    stroke-width: 2px;
+    stroke: #000;
+    stroke-width: 1px;
+    fill: white;
+}
+
+#map path.hasDataset {
+    fill: #30397a;
+}
+
+#map path.hasDataset:hover, #map path.active {
+    fill: #5d9e95;
     cursor: pointer;
 }
 
-#map path:hover, #map path.active {
-    fill: #df3e67;
+#map {
+  height: 500px;
 }
