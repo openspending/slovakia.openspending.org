@@ -1,23 +1,46 @@
 $(document).ready(function() {
-  $.getJSON('/data/districts.json', function(districts) {
-    districts = _.filter(districts, function(d) { return d.dataset !== undefined; });
+  $.when($.getJSON('/data/districts.json'), $.getJSON('/data/regions.json')).done(function(districts, regions) {
+    districts = _.filter(districts[0], function(d) { return d.dataset !== undefined; });
+    regions = regions[0];
     window.map = $K.map('#map', 920, 500);
 
     map.loadMap('/img/slovakia.svg', function(map) {
       map.loadCSS('/css/map_styles.css', function() {
         map.addLayer('district', {
           key: 'id-2',
-          title: function (data) { return data["name-2"]; }
+          title: function (data) { return data['name-2']; }
+        });
+        map.addLayer('region', {
+          key: 'varname-1',
+          title: function (data) { return data['varname-1']; },
+          click: function (data) {
+            var region = _.find(regions, function (region) {
+              return region.name == data['varname-1'];
+            });
+            if (region) {
+              window.location.href = urlFor(region.dataset);
+            }
+          }
         });
 
         $.each(map.getLayer('district').paths, function (i, path) {
           findDistrict(districts, path.data, function () {
-            $(path.svgPath.node).addClass('hasDataset');
+            var node = path.svgPath.node;
+            $(node).addClass('hasDataset');
+            node.ownerSVGElement.appendChild(node)
           });
         });
 
+        var regionPaths = map.getLayer('region').pathsById;
+        $.each(regions, function (i, region) {
+          var path = regionPaths[region.name];
+          if (path) {
+            $(path[0].svgPath.node).addClass('hasDataset');
+          }
+        });
+
         addDistrictsToPathData(map.getLayer('district').paths, districts);
-        setupTooltips();
+        setupDistrictsTooltips();
         setupDistrictsList(districts, $('#district-list'));
       });
     });
@@ -40,8 +63,8 @@ $(document).ready(function() {
     });
   }
 
-  function setupTooltips() {
-    $('.hasDataset').qtip({
+  function setupDistrictsTooltips() {
+    $('.district.hasDataset').qtip({
       content: {
         text: function (abc) {
           var district = this.data().district;

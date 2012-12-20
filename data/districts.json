@@ -1,13 +1,5 @@
 [
     {
-        "name": "Bratislava",
-        "dataset": "bratislava"
-    },
-    {
-        "name": "Košice",
-        "dataset": "kosice"
-    },
-    {
         "location": {
             "lat": "48.31", 
             "lon": "18.085833"

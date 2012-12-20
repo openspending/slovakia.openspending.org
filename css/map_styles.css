@@ -1,18 +1,33 @@
 #map path {
-    stroke: #fff;
-    stroke-width: 2px;
-    fill: #ddd;
+  stroke: #fff;
+  stroke-width: 2px;
+  fill: #ddd;
+}
+
+#map path.region {
+  fill: none;
+  stroke: none;
 }
 
 #map path.hasDataset {
-    fill: #30397a;
+  cursor: pointer;
 }
 
-#map path.hasDataset:hover, #map path.active {
-    fill: #5d9e95;
-    cursor: pointer;
+#map path.region.hasDataset {
+  stroke: #1a1f43;
+  fill: #6477ff;
+  fill-opacity: 0.3;
 }
 
-#map {
-  height: 500px;
+#map path.region.hasDataset:hover {
+  fill: #5d9e95;
+  fill-opacity: 0.7;
+}
+
+#map path.district.hasDataset {
+  fill: #30397a;
+}
+
+#map path.district.hasDataset:hover {
+  fill: #5d9e95;
 }
