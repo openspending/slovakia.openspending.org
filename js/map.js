@@ -7,82 +7,77 @@ $(document).ready(function() {
     map.loadMap('/img/slovakia.svg', function(map) {
       map.loadCSS('/css/map_styles.css', function() {
         map.addLayer('district', {
-          key: 'id-2',
-          title: function (data) { return data['name-2']; }
+          key: 'name-2',
+          title: function(data) { return data['name-2']; }
         });
         map.addLayer('region', {
           key: 'varname-1',
-          title: function (data) { return data['varname-1']; },
-          click: function (data) {
-            var region = _.find(regions, function (region) {
+          title: function(data) { return data['varname-1']; },
+          click: function(data) {
+            var region = _.find(regions, function(region) {
               return region.name == data['varname-1'];
             });
             if (region) {
-              window.location.href = urlFor(region.dataset);
+              redirectTo(region.dataset);
             }
           }
         });
 
-        $.each(map.getLayer('district').paths, function (i, path) {
-          findDistrict(districts, path.data, function () {
-            var node = path.svgPath.node;
-            $(node).addClass('has-dataset');
-            node.ownerSVGElement.appendChild(node)
-          });
+        eachElementsPathNodeInLayer('district', districts, function(node) {
+          $(node).addClass('has-dataset');
+          sendToFrontInside(node, node.ownerSVGElement);
         });
 
-        var regionPaths = map.getLayer('region').pathsById;
-        $.each(regions, function (i, region) {
-          var path = regionPaths[region.name];
-          if (path) {
-            var node = path[0].svgPath.node;
-            var strokeNode = node.cloneNode();
-            $(node).addClass('has-dataset');
-            $(strokeNode).addClass('stroke-only');
-            node.ownerSVGElement.appendChild(strokeNode);
-          }
+        eachElementsPathNodeInLayer('region', regions, function(node) {
+          var strokeNode = node.cloneNode();
+          $(node).addClass('has-dataset');
+          $(strokeNode).addClass('stroke-only');
+          sendToFrontInside(strokeNode, node.ownerSVGElement);
         });
 
-        addDistrictsToPathData(map.getLayer('district').paths, districts);
+        addDistrictsToPathData('district', districts);
         setupDistrictsTooltips();
         setupDistrictsList(districts, $('#district-list'));
       });
     });
   });
 
-  function findDistrict(districts, data, callback) {
-    var district = _.find(districts, function (district) {
-      return district.name === data["name-2"];
+  function eachElementsPathNodeInLayer(layerName, elements, callback) {
+    var paths = map.getLayer(layerName).pathsById;
+    $.each(elements, function (i, element) {
+      var path = paths[element.name];
+      if (path) {
+        callback(path[0].svgPath.node, element);
+      }
     });
-    if (district) {
-      callback(district);
-    }
-  }
+  };
 
-  function addDistrictsToPathData(paths, districts) {
-    $.each(paths, function (i, path) {
-      findDistrict(districts, path.data, function (district) {
-        $(path.svgPath.node).data('district', district);
-      });
+  function sendToFrontInside(svgElement, container) {
+    container.appendChild(svgElement);
+  };
+
+  function addDistrictsToPathData(districtLayerName, districts) {
+    eachElementsPathNodeInLayer(districtLayerName, districts, function(node, district) {
+      $(node).data('district', district);
     });
-  }
+  };
 
   function setupDistrictsTooltips() {
     $('.district.has-dataset').qtip({
       content: {
-        text: function (abc) {
+        text: function() {
           var district = this.data().district;
           var dataset = district.dataset;
           var text = '';
 
-          $.each(dataset, function (i, dataset) {
+          $.each(dataset, function(i, dataset) {
             text += '<p><a href="'+urlFor(dataset.dataset)+'">'+dataset.name+'</a></p>';
           });
 
           return text;
         },
         title: {
-          text: function () { return this.data().district.name; },
+          text: function() { return this.data().district.name; },
           button: true
         }
       },
@@ -91,19 +86,19 @@ $(document).ready(function() {
         solo: true
       },
       events: {
-        show: function(event, api, abc) {
+        show: function(event) {
           var district = $('#'+event.originalEvent.target.id).data().district;
           var dataset = district.dataset;
           if (_.isString(dataset)) {
             event.preventDefault();
-            window.location.href = urlFor(dataset);
+            redirectTo(dataset);
           }
         }
       },
       hide: false,
       style: 'qtip-light qtip-rounded'
     });
-  }
+  };
 
   function setupDistrictsList(districts, list) {
     list.empty();
@@ -117,10 +112,14 @@ $(document).ready(function() {
         setupDistrictsList(dataset, sublist);
       }
     });
-  }
+  };
+
+  function redirectTo(dataset) {
+    window.location.href = urlFor(dataset);
+  };
 
   function urlFor(dataset) {
     return '/municipality/#' + dataset;
-  }
+  };
 });
 
