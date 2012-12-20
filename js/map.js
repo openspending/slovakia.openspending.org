@@ -26,7 +26,7 @@ $(document).ready(function() {
         $.each(map.getLayer('district').paths, function (i, path) {
           findDistrict(districts, path.data, function () {
             var node = path.svgPath.node;
-            $(node).addClass('hasDataset');
+            $(node).addClass('has-dataset');
             node.ownerSVGElement.appendChild(node)
           });
         });
@@ -35,7 +35,11 @@ $(document).ready(function() {
         $.each(regions, function (i, region) {
           var path = regionPaths[region.name];
           if (path) {
-            $(path[0].svgPath.node).addClass('hasDataset');
+            var node = path[0].svgPath.node;
+            var strokeNode = node.cloneNode();
+            $(node).addClass('has-dataset');
+            $(strokeNode).addClass('stroke-only');
+            node.ownerSVGElement.appendChild(strokeNode);
           }
         });
 
@@ -64,7 +68,7 @@ $(document).ready(function() {
   }
 
   function setupDistrictsTooltips() {
-    $('.district.hasDataset').qtip({
+    $('.district.has-dataset').qtip({
       content: {
         text: function (abc) {
           var district = this.data().district;

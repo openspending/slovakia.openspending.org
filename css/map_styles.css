@@ -9,25 +9,29 @@
   stroke: none;
 }
 
-#map path.hasDataset {
+#map path.has-dataset {
   cursor: pointer;
 }
 
-#map path.region.hasDataset {
+#map path.stroke-only {
+  fill: none;
   stroke: #1a1f43;
+}
+
+#map path.region.has-dataset {
   fill: #6477ff;
   fill-opacity: 0.3;
 }
 
-#map path.region.hasDataset:hover {
+#map path.region.has-dataset:hover {
   fill: #5d9e95;
   fill-opacity: 0.7;
 }
 
-#map path.district.hasDataset {
+#map path.district.has-dataset {
   fill: #30397a;
 }
 
-#map path.district.hasDataset:hover {
+#map path.district.has-dataset:hover {
   fill: #5d9e95;
 }
