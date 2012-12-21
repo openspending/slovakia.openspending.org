@@ -108,8 +108,7 @@ $(function() {
       $.ajax({
             url: context.siteUrl + '/' + self.dataset + '.json',
             dataType: 'jsonp',
-            cache: true,
-            jsonpCallback: 'metadata_' + self.dataset
+            cache: true
             }).then(function(data) {
               $('.page-title').html(data.label);
               $('title').html(data.label);
