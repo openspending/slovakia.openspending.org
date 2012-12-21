@@ -24,8 +24,10 @@ $(document).ready(function() {
         });
 
         eachElementsPathNodeInLayer('district', districts, function(node) {
+          // Move the node with its parent, which holds its tooltip.
+          var parent = $(node).parent()[0];
+          sendToFrontInside(parent, node.ownerSVGElement);
           $(node).addClass('has-dataset');
-          sendToFrontInside(node, node.ownerSVGElement);
         });
 
         eachElementsPathNodeInLayer('region', regions, function(node) {
