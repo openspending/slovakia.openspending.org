@@ -1,18 +1,16 @@
-OpenSpending = "OpenSpending" in window ? OpenSpending : {}
+OpenSpending = 'OpenSpending' in window ? OpenSpending : {}
 
 $(function() {
   var context = {
-    siteUrl: "http://openspending.org",
+    siteUrl: 'http://openspending.org',
     pagesize: 10,
-    callback: function(name) {
-      console.log("HUHU");
-    }
+    callback: function() {}
   };
 
   OpenSpending.WidgetLink = Backbone.Router.extend({
     routes: {
-        ":dataset": "home",
-        ":dataset/*args": "drilldown"
+        ':dataset': 'home',
+        ':dataset/*args': 'drilldown'
     },
 
     home: function(dataset) {
@@ -23,7 +21,6 @@ $(function() {
     },
 
     drilldown: function(dataset, args) {
-      //this.dataset = dataset;
       this.setDataset(dataset);
       var router = this;
       var currentFilters = this.getFilters();
@@ -59,7 +56,6 @@ $(function() {
 
     setupYearsLinks: function() {
       var self = this;
-      var router = this;
       this.yearsContainer.empty();
 
       function fetchDistinct(dimension, attribute, query) {
@@ -75,7 +71,7 @@ $(function() {
 
       function renderYears(years) {
         _.each(years.sort(), function (year) {
-          self.yearsContainer.append("<a class='btn' data-year='"+year+"' href='#'>"+year+"</a>");
+          self.yearsContainer.append('<a class="btn" data-year="'+year+'" href="#">'+year+'</a>');
         });
       }
 
@@ -84,12 +80,12 @@ $(function() {
           var element = $(this);
           element.siblings().removeClass('disable')
           element.addClass('disable');
-          router.setFilters(element.data());
+          self.setFilters(element.data());
           return false;
         });
       }
 
-      return fetchDistinct("time", "year").then(function (distinct) {
+      return fetchDistinct('time', 'year').then(function (distinct) {
         var years = _.map(distinct.results, function (result) {
           return result.year;
         });
@@ -100,13 +96,12 @@ $(function() {
     },
 
     setDataset: function(dataset) {
-      var self = this;
-      if (dataset == this.dataset) {
+      if (dataset === this.dataset) {
         return;
       }
       this.dataset = dataset;
       $.ajax({
-            url: context.siteUrl + '/' + self.dataset + '.json',
+            url: context.siteUrl + '/' + this.dataset + '.json',
             dataType: 'jsonp',
             cache: true
             }).then(function(data) {
