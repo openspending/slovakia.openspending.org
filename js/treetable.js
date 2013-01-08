@@ -52,6 +52,18 @@ OpenSpending.Treetable = function (context, drilldowns) {
             return formattedVal;
           }
         });
+    columns.push({
+          'name': 'yearlyChangePct',
+          'label': '%',
+          'width': '7%',
+          'render': function(coll, obj) {
+            var formattedVal = obj;
+            if (_.isNumber(formattedVal)) {
+              formattedVal = (formattedVal * 100).toFixed(2) + '%';
+            };
+            return formattedVal;
+          }
+        });
 
     return columns;
   }
@@ -84,8 +96,10 @@ OpenSpending.Treetable = function (context, drilldowns) {
 
       if (lastYear) {
         row.yearlyChange = row.amount - lastYear.amount;
+        row.yearlyChangePct = (row.yearlyChange) / row.amount;
       } else {
         row.yearlyChange = "-";
+        row.yearlyChangePct = "-";
       };
 
       return row;
@@ -95,6 +109,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
       var totalRow = rows[rows.length - 1];
       if (lastYearData.summary.num_entries > 0) {
         totalRow.yearlyChange = totalRow.amount - lastYearData.summary.amount;
+        totalRow.yearlyChangePct = (totalRow.yearlyChange) / totalRow.amount;
       }
     }
 
