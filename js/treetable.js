@@ -79,11 +79,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
     var rows = calculateRowsValues(data);
     var newRows = _.map(rows, function(row) {
       var lastYear = _.find(lastYearData.drilldown, function (lastYear) {
-        var blah = true;
-        for (var i in drilldowns) {
-          blah = blah && row[drilldowns[i]] && lastYear[drilldowns[i]] && (row[drilldowns[i]].id === lastYear[drilldowns[i]].id);
-        };
-        return blah;
+        return _rowRepresentSameEntityAs(row, lastYear, drilldowns);
       });
 
       if (lastYear) {
@@ -103,7 +99,15 @@ OpenSpending.Treetable = function (context, drilldowns) {
     }
 
     return newRows;
-  }
+  };
+
+  function _rowRepresentSameEntityAs(row, otherRow, drilldowns) {
+    var isEqual = true;
+    for (var i in drilldowns) {
+      isEqual = isEqual && row[drilldowns[i]] && otherRow[drilldowns[i]] && (row[drilldowns[i]].id === otherRow[drilldowns[i]].id);
+    };
+    return isEqual;
+  };
 
   return {
     render: render,
