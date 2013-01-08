@@ -93,7 +93,11 @@ OpenSpending.Treetable = function (context, drilldowns) {
 
     if (rows.length > 0) {
       var totalRow = rows[rows.length - 1];
-      totalRow.yearlyChange = totalRow.amount - lastYearData.summary.amount;
+      if (lastYearData.summary.num_entries > 0) {
+        totalRow.yearlyChange = totalRow.amount - lastYearData.summary.amount;
+      } else {
+        totalRow.yearlyChange = "";
+      }
     }
 
     return newRows;
