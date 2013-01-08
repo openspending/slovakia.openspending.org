@@ -43,6 +43,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
           'name': 'yearlyChange',
           'label': 'Yearly Change (<span class="currency"></span>)',
           'width': '20%',
+          'sortable': false,
           'render': function(coll, obj) {
             var formattedVal = obj;
             if (_.isNumber(formattedVal)) {
@@ -56,6 +57,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
           'name': 'yearlyChangePct',
           'label': '%',
           'width': '7%',
+          'sortable': false,
           'render': function(coll, obj) {
             var formattedVal = obj;
             if (_.isNumber(formattedVal)) {
