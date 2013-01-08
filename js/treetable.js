@@ -44,8 +44,12 @@ OpenSpending.Treetable = function (context, drilldowns) {
           'label': 'Yearly Change (<span class="currency"></span>)',
           'width': '20%',
           'render': function(coll, obj) {
-            return OpenSpending.Utils.formatAmountWithCommas(obj || 0,
-              0, coll.aData['__amount_currency']);
+            var formattedVal = obj;
+            if (_.isNumber(formattedVal)) {
+              formattedVal = OpenSpending.Utils.formatAmountWithCommas(obj,
+                0, coll.aData['__amount_currency']);
+            };
+            return formattedVal;
           }
         });
 
@@ -85,7 +89,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
       if (lastYear) {
         row.yearlyChange = row.amount - lastYear.amount;
       } else {
-        row.yearlyChange = "";
+        row.yearlyChange = "-";
       };
 
       return row;
@@ -95,8 +99,6 @@ OpenSpending.Treetable = function (context, drilldowns) {
       var totalRow = rows[rows.length - 1];
       if (lastYearData.summary.num_entries > 0) {
         totalRow.yearlyChange = totalRow.amount - lastYearData.summary.amount;
-      } else {
-        totalRow.yearlyChange = "";
       }
     }
 
