@@ -135,6 +135,10 @@ footer a, footer a:hover {
 #browser table tr {
 }
 
+.table-widget .total {
+  font-weight: bold;
+}
+
 #browser .department-facet,
 #browser .clear-search {
   display: none;
