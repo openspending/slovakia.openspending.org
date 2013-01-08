@@ -6,7 +6,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
     });
 
     var lastYearDataDeferred = _loadLastYearData(render_ctx, state);
-    var aggregateTable = new OpenSpending.AggregateTable($('#table_widget'), render_ctx, state)
+    var aggregateTable = new OpenSpending.AggregateTable($('#table-widget'), render_ctx, state)
 
     $.when(aggregateTable, lastYearDataDeferred).then(function(widget, lastYearData) {
       widget.calculateRowsValues = _.wrap(widget.calculateRowsValues, function (calculateRowsValues, data) {
@@ -24,7 +24,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
         widget.update(state);
       }
     });
-    new OpenSpending.Treemap($('#vis_widget'), treemap_ctx, state);
+    new OpenSpending.Treemap($('#vis-widget'), treemap_ctx, state);
   }
 
   function _loadLastYearData(context, state) {
