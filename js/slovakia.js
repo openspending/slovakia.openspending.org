@@ -7,6 +7,9 @@ $(function() {
     callback: function() {}
   };
 
+  OpenSpending.localeGroupSeparator = ' ';
+  OpenSpending.localeDecimalSeparator = ',';
+
   OpenSpending.WidgetLink = Backbone.Router.extend({
     routes: {
         ':dataset': 'home',

@@ -61,7 +61,7 @@ OpenSpending.Treetable = function (context, drilldowns) {
           'render': function(coll, obj) {
             var formattedVal = obj;
             if (_.isNumber(formattedVal)) {
-              formattedVal = (formattedVal * 100).toFixed(2) + '%';
+              return OpenSpending.Utils.formatAmountWithCommas(obj, 2) + '%';
             };
             return formattedVal;
           }
