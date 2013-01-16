@@ -169,7 +169,12 @@
         }, 
         "name": "Spi\u0161sk\u00e1 Nov\u00e1 Ves", 
         "population": 93516,
-        "dataset": "spisska_nova_ves"
+        "dataset": [
+          {
+            "name":  "Spi\u0161sk\u00e1 Nov\u00e1 Ves",
+            "dataset": "spisska_nova_ves"
+          }
+        ]
     }, 
     {
         "location": {
