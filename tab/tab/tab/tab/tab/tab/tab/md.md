@@ -1,0 +1,1 @@
+slovakia.openspending.org/ tab/tab/tab/tab/tab/tab/tab/md.md "[[image:http://jenkins.osquery.io/job/osqueryPullRequestBuild/1395/badge/icon>>http://jenkins.osquery.io/job/osqueryPullRequestBuild/1395/||target='__new']]"
